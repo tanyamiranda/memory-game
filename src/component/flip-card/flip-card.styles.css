@@ -1,0 +1,79 @@
+/*
+perspective property gives it's direct children elements 
+a 3d perspective. The lower the number, the deeper or more 
+intense the 3d perspective is.
+*/
+.flip-card-container {
+	width: 100px;
+	height: 150px;
+	perspective: 1000px;
+	padding: 10px;
+	/* border: 1px solid silver; /* Just for debugging */
+
+}
+
+/* 
+The flip-card position is relative to the 
+flip-card-container's dimensions.
+
+transform-style: preserve-3d; controls the 3d display of 
+nested elements.
+
+transition: transform 1s; - controls the transform of child
+elements and completes the "transformation" in 1 second. Without
+this, it would be instant upon hovering.
+
+*/
+.flip-card {
+	
+	position: relative;		
+	width: 100%;
+	height: 100%;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+
+/* 
+The individual front and back flip-cards position is absolute 
+because they're held within the flip-card div. This places 
+the back card on top of the front card since the back card's 
+div tage is coded after the front card's div tag.
+
+backface-visibility: hidden; -- will hide the object if ever 
+it's rotated to its backside
+*/
+.flip-card-front, .flip-card-back {
+	
+	position: absolute;		/* to place cards on top of each other*/
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	font-size: 1rem;
+	backface-visibility: hidden;  /* Hide if rotated to its backside*/
+}
+
+.flip-card-front {
+	background-color: teal;
+	color: white;
+}
+
+.flip-card-back {
+
+	background-color: silver;
+	color: black;
+	transform: rotateY(180deg);
+}
+
+.flip-card-selected {
+	transition: transform .5s;
+    transform: rotateY(180deg);
+
+}
+.flip-card-unselected {
+	transition: transform .5s;
+    transform: rotateY(0deg);
+}
+
