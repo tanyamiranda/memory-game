@@ -15,6 +15,10 @@ export const unselectCard = (cardIndex) => ({
     payload: cardIndex
 })
 
+export const attemptToMatchCards = () => ({
+    type: GameActionTypes.ATTEMPT_TO_MATCH
+})
+
 export const foundMatchingCards = (cardValue) => ({
     type: GameActionTypes.FOUND_MATCHING_CARDS,
     payload: cardValue

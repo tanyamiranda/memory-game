@@ -4,11 +4,10 @@ const INITIAL_STATE = {
     completeSetOfCards: [],
     matchedCards: [],
     selectedCardIndexes: [],
-    resetCardIndexes: [],
     startTime: null,
     endTime: null, 
-    elapsedTime: null,
-    totalCardFlips: 0
+    totalCardFlips: 0,
+    totalMatchAttempts: 0
 }
 
 const gameReducer = (state = INITIAL_STATE, action) => {
@@ -17,9 +16,13 @@ const gameReducer = (state = INITIAL_STATE, action) => {
 
         case GameActionTypes.START_NEW_GAME:
             return {
-                ...state,
                 completeSetOfCards: action.payload,
-                startTime: Date.now()
+                matchedCards: [],
+                selectedCardIndexes: [],
+                startTime: Date.now(),
+                endTime: null, 
+                totalCardFlips: 0,
+                totalMatchAttempts: 0
             }
 
         case GameActionTypes.SELECT_CARD:
@@ -36,6 +39,12 @@ const gameReducer = (state = INITIAL_STATE, action) => {
                 selectedCardIndexes: state.selectedCardIndexes.filter(value => value !== action.payload)
             }
 
+        case GameActionTypes.ATTEMPT_TO_MATCH:
+            return {
+                ...state,
+                totalMatchAttempts: state.totalMatchAttempts + 1
+            }
+
         case GameActionTypes.FOUND_MATCHING_CARDS:
             state.matchedCards.push(action.payload)
             return {
@@ -47,7 +56,6 @@ const gameReducer = (state = INITIAL_STATE, action) => {
         case GameActionTypes.RESET_CARD_TABLE:
             return {
                 ...state,
-                resetCardIndexes: state.selectedCardIndexes,
                 selectedCardIndexes: []
             }
     
@@ -55,8 +63,7 @@ const gameReducer = (state = INITIAL_STATE, action) => {
         case GameActionTypes.FINISH_GAME:
             return {
                 ...state,
-                endTime: Date.now(),
-                elapsedTime: state.endTime - state.startTime
+                endTime: Date.now()
             }
 
         default:

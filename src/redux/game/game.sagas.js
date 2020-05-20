@@ -1,8 +1,8 @@
 import {takeLatest, put, all, call, delay, select} from 'redux-saga/effects';
 
 import GameActionTypes from './game.types';
-//import {getCompleteSetOfCards, getSelectedCardIndexes} from './game.selectors';
-import {foundMatchingCards, resetCardTable, continuePlaying, finishGame} from './game.actions';
+
+import {foundMatchingCards, resetCardTable, continuePlaying, finishGame, attemptToMatchCards} from './game.actions';
 
 export function* evaluateSelection() {
 
@@ -10,6 +10,8 @@ export function* evaluateSelection() {
     const game = yield select(selectGame);
 
     if (game.selectedCardIndexes.length===2) {
+
+        yield put(attemptToMatchCards());
 
         const cardIndexValue1 = game.completeSetOfCards[game.selectedCardIndexes[0]];
         const cardIndexValue2 = game.completeSetOfCards[game.selectedCardIndexes[1]];

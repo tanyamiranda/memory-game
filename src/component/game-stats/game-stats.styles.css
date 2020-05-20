@@ -1,0 +1,21 @@
+.game-stats{
+    width: 100%;
+    max-width: 400px;
+    font-size: small;
+    margin: auto;
+}
+
+.stats-table {
+    width: 400px;
+    margin: auto;
+    line-height: 2em;
+}
+.game-stat{
+    text-align: left;
+    display: grid;
+    grid-template-columns: 150px 250px;
+}
+
+.label {
+    font-weight: bold;
+}

@@ -4,12 +4,41 @@ a 3d perspective. The lower the number, the deeper or more
 intense the 3d perspective is.
 */
 .flip-card-container {
-	width: 100px;
-	height: 150px;
+	width: 150px;
+	min-width: 150px;
+	max-width: 150px; /* min and max required with flex design*/
+	height: 90px;
+	flex: 10%;
 	perspective: 1000px;
-	padding: 10px;
+	padding: 1px;
 	/* border: 1px solid silver; /* Just for debugging */
 
+}
+
+/* Smaller cards for larger card sets*/
+.flip-card-container-small {
+	width: 120px;
+	min-width: 130px;
+	max-width: 130px;
+	height: 70px;
+}
+
+@media screen and (max-width: 600px) {
+	.flip-card-container, .flip-card-container-small {
+		width: 100px;
+		min-width: 100px;
+		max-width: 100px; 
+		height: 60px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.flip-card-container, .flip-card-container-small {
+		width: 80px;
+		min-width: 80px;
+		max-width: 80px; 
+		height: 50px;
+	}
 }
 
 /* 
@@ -25,7 +54,6 @@ this, it would be instant upon hovering.
 
 */
 .flip-card {
-	
 	position: relative;		
 	width: 100%;
 	height: 100%;
@@ -44,7 +72,6 @@ backface-visibility: hidden; -- will hide the object if ever
 it's rotated to its backside
 */
 .flip-card-front, .flip-card-back {
-	
 	position: absolute;		/* to place cards on top of each other*/
 	width: 100%;
 	height: 100%;
@@ -53,16 +80,19 @@ it's rotated to its backside
 	align-items: center;	
 	font-size: 1rem;
 	backface-visibility: hidden;  /* Hide if rotated to its backside*/
+	border: 0.5px solid silver;
 }
 
 .flip-card-front {
-	background-color: teal;
-	color: white;
+	background-image: url("/memory-game-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #494957;
+	background-position: center;
 }
 
 .flip-card-back {
-
-	background-color: silver;
+	background-color: whitesmoke;
 	color: black;
 	transform: rotateY(180deg);
 }
@@ -76,4 +106,3 @@ it's rotated to its backside
 	transition: transform .5s;
     transform: rotateY(0deg);
 }
-

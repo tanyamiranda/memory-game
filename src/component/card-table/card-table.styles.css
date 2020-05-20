@@ -1,0 +1,24 @@
+* {
+	box-sizing: border-box;
+  }
+
+.card-table {
+	font-family: sans-serif;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-table-small {
+	max-width: 700px;
+}
+
+.card-table-medium {
+	max-width: 1000px;
+}
+
+.card-table-large {
+	max-width: 1000px;
+}

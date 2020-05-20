@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import Table from './component/table/table.component';
+import CardTable from './component/card-table/card-table.component';
 
 
 function App() {
   return (
     <div className="App">
-      
-        <Table/>
-      
+        <CardTable/>
     </div>
   );
 }

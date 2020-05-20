@@ -5,7 +5,7 @@ import './flip-card.styles.css';
 
 import {selectCard, unselectCard} from '../../redux/game/game.actions';
 
-const FlipCard = ({cardId, cardIndex, matchedCards, selectedCardIndexes, selectCard, unselectCard}) => {
+const FlipCard = ({cardId, cardIndex, matchedCards, selectedCardIndexes, selectCard, unselectCard, completeSetOfCards}) => {
 
     const hideCard = matchedCards.includes(cardId);
 
@@ -27,12 +27,15 @@ const FlipCard = ({cardId, cardIndex, matchedCards, selectedCardIndexes, selectC
         }
     }
 
+    const smallCards = completeSetOfCards.length >30 ? '-small' : '';
+
+
     return (
-        <div className="flip-card-container">
+        <div className={'flip-card-container' + smallCards}>
             {hideCard ? null : ( 
                 <div onClick={flipCard} id={cardIndex} className={`flip-card ` + (cardSelected ? `flip-card-selected` :`flip-card-unselected`)}>
-                    <div className="flip-card-front">FRONT<br/>index:{cardIndex}<br/>{cardId}</div>
-                    <div className="flip-card-back">BACK<br/>index:{cardIndex}<br/>{cardId}</div>
+                    <div className="flip-card-front"></div>
+                    <div className="flip-card-back">{cardId}</div>
                 </div>
             )}
         </div>
@@ -41,7 +44,7 @@ const FlipCard = ({cardId, cardIndex, matchedCards, selectedCardIndexes, selectC
 };
 
 const mapStateToProps = state => ({
-    resetCardIndexes: state.game.resetCardIndexes,
+    completeSetOfCards: state.game.completeSetOfCards,
     matchedCards: state.game.matchedCards,
     selectedCardIndexes: state.game.selectedCardIndexes
 });
