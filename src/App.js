@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import CardTable from './component/card-table/card-table.component';
+import PlayGame from './component/play-game/play-game.component';
 
 
 function App() {
   return (
     <div className="App">
-        <CardTable/>
+        <PlayGame/>
     </div>
   );
 }

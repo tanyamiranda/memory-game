@@ -35,3 +35,12 @@ export const finishGame = () => ({
 export const continuePlaying = () => ({
     type: GameActionTypes.CONTINUE_PLAYING
 })
+
+export const restartCurrentGame = () => ({
+    type: GameActionTypes.RESTART_CURRENT_GAME
+})
+
+
+export const cancelCurrentGame = () => ({
+    type: GameActionTypes.CANCEL_CURRENT_GAME
+})

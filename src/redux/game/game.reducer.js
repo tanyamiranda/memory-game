@@ -25,6 +25,27 @@ const gameReducer = (state = INITIAL_STATE, action) => {
                 totalMatchAttempts: 0
             }
 
+        case GameActionTypes.RESTART_CURRENT_GAME:
+            return {
+                ...state,
+                matchedCards: [],
+                selectedCardIndexes: [],
+                startTime: Date.now(),
+                totalCardFlips: 0,
+                totalMatchAttempts: 0
+            }
+
+        case GameActionTypes.CANCEL_CURRENT_GAME:
+            return {
+                completeSetOfCards: [],
+                matchedCards: [],
+                selectedCardIndexes: [],
+                startTime: null,
+                endTime: null, 
+                totalCardFlips: 0,
+                totalMatchAttempts: 0
+            }
+
         case GameActionTypes.SELECT_CARD:
             state.selectedCardIndexes.push(action.payload);
             return {

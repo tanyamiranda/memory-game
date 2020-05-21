@@ -1,0 +1,15 @@
+.header-title {
+    font-family: 'Black Ops One';
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+
+.header-text {
+    padding: 10px 0px;
+}
+
+.header-logo svg {
+    width: 100px;
+    height: 100px;
+}

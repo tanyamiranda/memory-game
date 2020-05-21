@@ -1,0 +1,47 @@
+.game-setup {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    display: inline;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+    text-align: center;
+    display: block;
+}
+
+.config {
+    padding: 10px 0px;
+    width: 250px;
+    margin: auto;
+}
+
+.config-detail {
+    padding: 10px 0px;
+}
+
+.config-option {
+    padding: 10px;
+    width: 70px;
+    background-color: lightblue;
+    display: inline-block;
+}
+
+.config-option-selected {
+    background-color: #587ba7;
+    border-style: inset;
+    color: white;
+}
+
+.action-button {
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    background: green;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+}

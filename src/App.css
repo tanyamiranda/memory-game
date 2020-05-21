@@ -42,5 +42,11 @@ body {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("/squares.svg");
+	background-color: lightgray;
+	background-attachment: fixed;
+
 }

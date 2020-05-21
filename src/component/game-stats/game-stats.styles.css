@@ -6,16 +6,20 @@
 }
 
 .stats-table {
-    width: 400px;
+    width: 100%;
+    min-width: 300px;
     margin: auto;
     line-height: 2em;
+    padding: 20px 0px;
 }
 .game-stat{
     text-align: left;
     display: grid;
-    grid-template-columns: 150px 250px;
+    grid-template-columns: 50% 50%;
 }
 
 .label {
     font-weight: bold;
+    text-align: right;
+    padding-right: 10px;
 }

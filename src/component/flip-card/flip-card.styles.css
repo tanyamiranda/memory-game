@@ -3,7 +3,8 @@ perspective property gives it's direct children elements
 a 3d perspective. The lower the number, the deeper or more 
 intense the 3d perspective is.
 */
-.flip-card-container {
+.flip-card-container-medium,
+.flip-card-container-large {
 	width: 150px;
 	min-width: 150px;
 	max-width: 150px; /* min and max required with flex design*/
@@ -24,7 +25,13 @@ intense the 3d perspective is.
 }
 
 @media screen and (max-width: 600px) {
-	.flip-card-container, .flip-card-container-small {
+	.flip-card-container-medium {
+		width: 120px;
+		min-width: 120px;
+		max-width: 120px; 
+		height: 65px;
+	}	
+	.flip-card-container-small {
 		width: 100px;
 		min-width: 100px;
 		max-width: 100px; 
@@ -33,7 +40,19 @@ intense the 3d perspective is.
 }
 
 @media screen and (max-width: 400px) {
-	.flip-card-container, .flip-card-container-small {
+	.flip-card-container-large {
+		width: 110px;
+		min-width: 110px;
+		max-width: 110px; 
+		height: 60px;
+	}
+	.flip-card-container-medium{
+		width: 100px;
+		min-width: 100px;
+		max-width: 100px; 
+		height: 60px;
+	}
+	.flip-card-container-small {
 		width: 80px;
 		min-width: 80px;
 		max-width: 80px; 
@@ -61,6 +80,10 @@ this, it would be instant upon hovering.
 	transform-style: preserve-3d;
 }
 
+.flip-card svg {
+    width: 50px;
+    height: 50px;
+}
 
 /* 
 The individual front and back flip-cards position is absolute 
@@ -84,9 +107,6 @@ it's rotated to its backside
 }
 
 .flip-card-front {
-	background-image: url("/memory-game-logo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
     background-color: #494957;
 	background-position: center;
 }
