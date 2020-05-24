@@ -18,7 +18,7 @@ intense the 3d perspective is.
 
 /* Smaller cards for larger card sets*/
 .flip-card-container-small {
-	width: 120px;
+	width: 130px;
 	min-width: 130px;
 	max-width: 130px;
 	height: 70px;
@@ -41,9 +41,9 @@ intense the 3d perspective is.
 
 @media screen and (max-width: 400px) {
 	.flip-card-container-large {
-		width: 110px;
-		min-width: 110px;
-		max-width: 110px; 
+		width: 130px;
+		min-width: 130px;
+		max-width: 130px; 
 		height: 60px;
 	}
 	.flip-card-container-medium{

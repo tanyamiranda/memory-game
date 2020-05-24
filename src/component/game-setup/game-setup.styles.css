@@ -1,11 +1,5 @@
 .game-setup {
-    width: 100vw;
-    height: 100vh;
-    padding: 20px;
-    display: inline;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
+    padding-top: 20px;
 }
 
 button {
@@ -26,12 +20,16 @@ button {
 .config-option {
     padding: 10px;
     width: 70px;
-    background-color: lightblue;
+    background-color: #000e7e;
     display: inline-block;
+    margin: 3px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
 }
 
 .config-option-selected {
-    background-color: #587ba7;
+    background-color: green;
     border-style: inset;
     color: white;
 }

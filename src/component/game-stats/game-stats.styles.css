@@ -1,11 +1,11 @@
 .game-stats{
     width: 100%;
     max-width: 400px;
-    font-size: small;
     margin: auto;
 }
 
 .stats-table {
+    font-size: small;
     width: 100%;
     min-width: 300px;
     margin: auto;

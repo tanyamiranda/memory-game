@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import './flip-card.styles.css';
 
-import {ReactComponent as GameLogo} from '../../assets/game-logo.svg';
+import {ReactComponent as GameLogo} from '../../assets/logo-card-backs.svg';
 import {selectCard, unselectCard} from '../../redux/game/game.actions';
 
 const FlipCard = ({cardId, cardIndex, matchedCards, selectedCardIndexes, selectCard, unselectCard, completeSetOfCards}) => {
@@ -28,11 +28,11 @@ const FlipCard = ({cardId, cardIndex, matchedCards, selectedCardIndexes, selectC
         }
     }
 
-    const smallCards = completeSetOfCards.length >=30 ? '-small' : completeSetOfCards.length >=20 ? '-medium' : '-large';
+    const cardSize = completeSetOfCards.length >=30 ? '-small' : completeSetOfCards.length >=20 ? '-medium' : '-large';
 
 
     return (
-        <div className={'flip-card-container' + smallCards}>
+        <div className={'flip-card-container' + cardSize}>
             {hideCard ? null : ( 
                 <div onClick={flipCard} id={cardIndex} className={`flip-card ` + (cardSelected ? `flip-card-selected` :`flip-card-unselected`)}>
                     <div className="flip-card-front"><GameLogo/></div>

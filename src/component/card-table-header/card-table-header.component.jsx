@@ -11,8 +11,8 @@ const CardTableHeader = ({cancelCurrentGame, restartCurrentGame}) => {
 
         <div className="card-table-header">
             <div className="header-buttons">
-                <button className="header-action-button" onClick={restartCurrentGame}>Restart Game</button>  
-                <button className="header-action-button" onClick={cancelCurrentGame}>Cancel Game</button>  
+                <button className="header-action-button" onClick={restartCurrentGame}>Restart</button>  
+                <button className="header-action-button" onClick={cancelCurrentGame}>Cancel</button>
             </div>
         </div>
 

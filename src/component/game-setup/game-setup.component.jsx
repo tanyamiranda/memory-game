@@ -30,17 +30,17 @@ const GameSetup = ({startNewGame}) => {
 
 	return (
 		<div className="game-setup">
-			<GameHeader headerText="Traing your brain everyday with memory games." />
+			<GameHeader headerText="Train your brain everyday with memory games." />
 			<div className="config">
 				<div className="config-detail">Choose your level.</div>
-				{cardLevelOptions.map( value => (
-					<button className={"config-option " + (level === value ? "config-option-selected" : "")} name="cardCount" value={value} onClick={handleLevelSelection}>{value}</button>
+				{cardLevelOptions.map((value, index) => (
+					<button key={index} className={"config-option " + (level === value ? "config-option-selected" : "")} name="cardCount" value={value} onClick={handleLevelSelection}>{value}</button>
 				))}
 			</div>
 			<div className="config">					
 				<div className="config-detail">How many cards?</div>
-				{cardCountOptions.map( value => (
-					<button className={"config-option " + (cardCount === value ? "config-option-selected" : "")} name="cardCount" value={value} onClick={handleCardCountSelection}>{value}</button>
+				{cardCountOptions.map( (value, index) => (
+					<button key={index} className={"config-option " + (cardCount === value ? "config-option-selected" : "")} name="cardCount" value={value} onClick={handleCardCountSelection}>{value}</button>
 				))}
             </div> 
 			<div className="config">
