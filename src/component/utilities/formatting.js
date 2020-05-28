@@ -45,16 +45,14 @@ export const getElapsedTime = (startTime, endTime) => {
 	let message = "";
 
 	if (days > 0)
-		message = message + (days > 0, days + " days ");
+		message = message + days + " days, ";
 
 	if (hours > 0)		
-		message = message + (hours > 0, hours + " hours ");
+		message = message + hours + " hrs, ";
 	
-	if (minutes > 0)
-		message = message + (minutes > 0, minutes + " minutes ");
 	
-	if (seconds > 0)
-		message = message + (seconds > 0, seconds + " seconds ");
+	message = message + minutes + " min, ";	
+	message = message + seconds + " sec";
 
 	return message;
 

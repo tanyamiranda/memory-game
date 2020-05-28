@@ -45,8 +45,8 @@ const FlipCard = ({cardId, cardIndex, matchedCards, selectedCardIndexes, selectC
                     <div className="flip-card-back">
                         {
                             cardDisplay.map((value, index )=> 
-                                <div className={"card-display" + (value.includes(SYMBOL_HEARTS) || value.includes(SYMBOL_DIAMONDS) ? '-red' : '')} key={index}>
-                                    <span className="card-display-text">{value.substring(0,1) + value.substring(1,2)}</span>
+                                <div className={"card-display" + (value.includes(SYMBOL_HEARTS) || value.includes(SYMBOL_DIAMONDS) ? ' card-display-red' : '')} key={index}>
+                                    {value.substring(0,1) + value.substring(1,2)}
                                 </div>
                             )
                         }

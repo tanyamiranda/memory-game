@@ -2,10 +2,6 @@
 	border: 1px solid darkblue;
 }
 
-.card-display, .card-display-red {
-	word-spacing: 1em;
-}
-
 .card-display-red {
 	color: darkred;
 }
@@ -15,7 +11,6 @@
 }
 
 .card-display-text {
-	padding: 1px;
 	word-break: break-word;
 	text-align: center;
 }

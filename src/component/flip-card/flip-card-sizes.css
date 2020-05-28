@@ -1,3 +1,7 @@
+.cards-12, .cards-16, .cards-20, .cards-24, .cards-30, .cards-40 {
+    font-size: 1.25em;
+}
+
 .cards-12 {
     width: 23%;
     height: 30%;
@@ -29,7 +33,12 @@
 }
   
   
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
+
+    .cards-12, .cards-16, .cards-20, .cards-24, .cards-30, .cards-40 {
+        font-size: 1em;
+    }
+
     .cards-12 {
         width: 30%;
         height: 20%;
