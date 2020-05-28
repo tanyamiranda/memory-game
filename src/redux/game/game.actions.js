@@ -1,8 +1,8 @@
 import GameActionTypes from './game.types';
 
-export const startNewGame = (completeSetOfCards) => ({
+export const startNewGame = (completeSetOfCards, cardCount, level) => ({
     type: GameActionTypes.START_NEW_GAME,
-    payload: completeSetOfCards
+    payload: {completeSetOfCards, cardCount, level}
 })
 
 export const selectCard = (cardIndex) => ({
@@ -43,4 +43,12 @@ export const restartCurrentGame = () => ({
 
 export const cancelCurrentGame = () => ({
     type: GameActionTypes.CANCEL_CURRENT_GAME
+})
+
+export const hideAllCards = () => ({
+    type: GameActionTypes.HIDE_ALL_CARDS
+})
+
+export const showAllCards = () => ({
+    type: GameActionTypes.SHOW_ALL_CARDS
 })

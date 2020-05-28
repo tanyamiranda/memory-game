@@ -1,33 +1,26 @@
-* {
-	box-sizing: border-box;
-  }
-
-.card-table-wrapper {
-	display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-	height: 100vh;
-	justify-content: center;
-}
-
-.card-table {
-	font-family: sans-serif;
+.card-table{
 	width: 100%;
-	height: 90%;
+	height: 95%;
+	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 }
-
-.card-table-small {
-	max-width: 700px;
+  
+.top-section {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
 }
-
-.card-table-medium {
-	max-width: 1000px;
+  
+.bottom-section {
+	height: calc(100% - 60px);
+	width: 100%;
 }
-
-.card-table-large {
-	max-width: 1000px;
+  
+.game {
+	width: 100%;
+	height: 100%;
 }

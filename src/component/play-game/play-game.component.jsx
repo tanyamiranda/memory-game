@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import './play-game.styles.css';
+
 import GameStats from '../game-stats/game-stats.component';
 import GameSetup from '../game-setup/game-setup.component';
 import CardTable from '../card-table/card-table.component';

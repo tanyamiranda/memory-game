@@ -1,6 +1,9 @@
 import GameActionTypes from './game.types';
 
 const INITIAL_STATE = {
+    selectedLevel: null,
+    selectedCardCount: null,
+    cardsHidden: true,
     completeSetOfCards: [],
     matchedCards: [],
     selectedCardIndexes: [],
@@ -16,7 +19,10 @@ const gameReducer = (state = INITIAL_STATE, action) => {
 
         case GameActionTypes.START_NEW_GAME:
             return {
-                completeSetOfCards: action.payload,
+                completeSetOfCards: action.payload.completeSetOfCards,
+                selectedCardCount: action.payload.cardCount,
+                cardsHidden: true,
+                selectedLevel: action.payload.level,
                 matchedCards: [],
                 selectedCardIndexes: [],
                 startTime: Date.now(),
@@ -85,6 +91,18 @@ const gameReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 endTime: Date.now()
+            }
+
+        case GameActionTypes.SHOW_ALL_CARDS:
+            return {
+                ...state,
+                cardsHidden: false
+            }
+        
+        case GameActionTypes.HIDE_ALL_CARDS:
+            return {
+                ...state,
+                cardsHidden: true
             }
 
         default:

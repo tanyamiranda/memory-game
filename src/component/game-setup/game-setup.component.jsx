@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import './game-setup.styles.css';
 
 import GameHeader  from '../game-header/game-header.component';
-import {getPairedUpCardSet} from '../utilities/card-data';
+import {getPairedUpCardSet} from '../utilities/card-data-processing';
 import {startNewGame} from '../../redux/game/game.actions';
 
 
@@ -22,7 +22,7 @@ const GameSetup = ({startNewGame}) => {
 
 	const handleStartGame = () => {
 		const shuffledCards = getPairedUpCardSet(cardCount,level);
-        startNewGame(shuffledCards);
+        startNewGame(shuffledCards, cardCount, level);
 	} 
 
 	const cardCountOptions=["12","16","20","24","30","40"];
@@ -34,13 +34,23 @@ const GameSetup = ({startNewGame}) => {
 			<div className="config">
 				<div className="config-detail">Choose your level.</div>
 				{cardLevelOptions.map((value, index) => (
-					<button key={index} className={"config-option " + (level === value ? "config-option-selected" : "")} name="cardCount" value={value} onClick={handleLevelSelection}>{value}</button>
+					<button key={index} 
+						className={"config-option " + (level === value ? "config-option-selected" : "")} 
+						name="cardCount" 
+						value={value} 
+						onClick={handleLevelSelection}
+					>{value}</button>
 				))}
 			</div>
 			<div className="config">					
 				<div className="config-detail">How many cards?</div>
 				{cardCountOptions.map( (value, index) => (
-					<button key={index} className={"config-option " + (cardCount === value ? "config-option-selected" : "")} name="cardCount" value={value} onClick={handleCardCountSelection}>{value}</button>
+					<button key={index} 
+						className={"config-option " + (cardCount === value ? "config-option-selected" : "")} 
+						name="cardCount" 
+						value={value} 
+						onClick={handleCardCountSelection}
+					>{value}</button>
 				))}
             </div> 
 			<div className="config">
@@ -52,7 +62,7 @@ const GameSetup = ({startNewGame}) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    startNewGame: (completeSetOfCards) => dispatch(startNewGame(completeSetOfCards))
+    startNewGame: (completeSetOfCards, cardCount, level) => dispatch(startNewGame(completeSetOfCards, cardCount, level))
 });
   
 export default connect(null,mapDispatchToProps)(GameSetup);

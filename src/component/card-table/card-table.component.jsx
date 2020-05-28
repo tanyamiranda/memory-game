@@ -8,15 +8,18 @@ import CardTableHeader from '../card-table-header/card-table-header.component';
 
 const CardTable = ({completeSetOfCards}) => {
 
-    const cartTableSize = completeSetOfCards.length >= 24 ? 'medium' : 'small';
-
     return (
-        <div className="card-table-wrapper">
-            <CardTableHeader/>
-            <div className={'card-table card-table-' + cartTableSize}>
+
+        <div className="game">
+            <div className="top-section">
+                <CardTableHeader/>
+            </div>
+            <div id="bottom-section" className="bottom-section">
+                <div className="card-table">
                 { completeSetOfCards.map((card, index) => (
                     <FlipCard key={index} cardId={card} cardIndex={index} />
                 ))}
+                </div>
             </div>
         </div>
     )

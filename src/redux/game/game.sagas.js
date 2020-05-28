@@ -25,7 +25,7 @@ export function* evaluateSelection() {
             }
         }
         else {
-            yield delay(500); //delay to allow for front end card flipping
+            yield delay(700); //delay to allow for front end card flipping
             yield put(resetCardTable());
         }
 

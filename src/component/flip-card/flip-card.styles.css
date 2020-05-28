@@ -1,77 +1,35 @@
-/*
-perspective property gives it's direct children elements 
-a 3d perspective. The lower the number, the deeper or more 
-intense the 3d perspective is.
-*/
-.flip-card-container-medium,
-.flip-card-container-large {
-	width: 150px;
-	min-width: 150px;
-	max-width: 150px; /* min and max required with flex design*/
-	height: 90px;
-	flex: 10%;
-	perspective: 1000px;
+.show-all-highlight-selected .flip-card-back {
+	border: 1px solid darkblue;
+}
+
+.card-display, .card-display-red {
+	word-spacing: 1em;
+}
+
+.card-display-red {
+	color: darkred;
+}
+
+.card-display {
+	padding: 2px;
+}
+
+.card-display-text {
 	padding: 1px;
-	/* border: 1px solid silver; /* Just for debugging */
-
+	word-break: break-word;
+	text-align: center;
 }
 
-/* Smaller cards for larger card sets*/
-.flip-card-container-small {
-	width: 130px;
-	min-width: 130px;
-	max-width: 130px;
-	height: 70px;
+/**
+Below here is all about flipping card over 
+css animation.
+**/
+.flip-card-container {
+	perspective: 1000px;
+	display: flex;
+	margin: 2px;
 }
 
-@media screen and (max-width: 600px) {
-	.flip-card-container-medium {
-		width: 120px;
-		min-width: 120px;
-		max-width: 120px; 
-		height: 65px;
-	}	
-	.flip-card-container-small {
-		width: 100px;
-		min-width: 100px;
-		max-width: 100px; 
-		height: 60px;
-	}
-}
-
-@media screen and (max-width: 400px) {
-	.flip-card-container-large {
-		width: 130px;
-		min-width: 130px;
-		max-width: 130px; 
-		height: 60px;
-	}
-	.flip-card-container-medium{
-		width: 100px;
-		min-width: 100px;
-		max-width: 100px; 
-		height: 60px;
-	}
-	.flip-card-container-small {
-		width: 80px;
-		min-width: 80px;
-		max-width: 80px; 
-		height: 50px;
-	}
-}
-
-/* 
-The flip-card position is relative to the 
-flip-card-container's dimensions.
-
-transform-style: preserve-3d; controls the 3d display of 
-nested elements.
-
-transition: transform 1s; - controls the transform of child
-elements and completes the "transformation" in 1 second. Without
-this, it would be instant upon hovering.
-
-*/
 .flip-card {
 	position: relative;		
 	width: 100%;
@@ -81,28 +39,18 @@ this, it would be instant upon hovering.
 }
 
 .flip-card svg {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
 }
 
-/* 
-The individual front and back flip-cards position is absolute 
-because they're held within the flip-card div. This places 
-the back card on top of the front card since the back card's 
-div tage is coded after the front card's div tag.
-
-backface-visibility: hidden; -- will hide the object if ever 
-it's rotated to its backside
-*/
 .flip-card-front, .flip-card-back {
-	position: absolute;		/* to place cards on top of each other*/
+	position: absolute;		
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;	
-	font-size: 1rem;
-	backface-visibility: hidden;  /* Hide if rotated to its backside*/
+	backface-visibility: hidden; 
 	border: 0.5px solid silver;
 }
 
@@ -126,3 +74,4 @@ it's rotated to its backside
 	transition: transform .5s;
     transform: rotateY(0deg);
 }
+
