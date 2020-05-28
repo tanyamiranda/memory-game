@@ -45,7 +45,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  background-image: url("/squares.svg");
+  background-image: url("/memory-game/squares.svg");
 	background-color: lightgray;
 	background-attachment: fixed;
 
