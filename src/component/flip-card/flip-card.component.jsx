@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import './flip-card.styles.css';
-import './flip-card-sizes.css';
 
 import {ReactComponent as GameLogo} from '../../assets/logo-card-backs.svg';
 import {selectCard, unselectCard} from '../../redux/game/game.actions';
@@ -38,7 +37,7 @@ const FlipCard = ({cardId, cardIndex, matchedCards, selectedCardIndexes, selectC
         + (cardSelected && !cardsHidden ? " show-all-highlight-selected" : "");
 
     return (
-        <div className={"flip-card-container cards-" + selectedCardCount }>
+        <div className="flip-card-container">
             {hideCard ? null : ( 
                 <div onClick={flipCard} id={cardIndex} className={flipCardClassNames}>
                     <div className="flip-card-front"><GameLogo/></div>

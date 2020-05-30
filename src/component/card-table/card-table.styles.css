@@ -1,27 +1,74 @@
 .card-table{
 	width: 100%;
-	height: 95%;
+	height: 100%;
 	margin: auto;
+	display: grid;
+  }
+  
+.card-container {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
+	background-color: gray;
+	text-align: center;
+	margin: 2px;
 }
   
-.top-section {
+/** Table layout for different card selections **/
+.card-table-12, 
+.card-table-16, 
+.card-table-20 {
+	grid-template-columns: repeat(4, 25%);
+}
+
+.card-table-24 {
+	grid-template-columns: repeat(6, calc(100% / 6)); 
+}
+.card-table-28 {
+	grid-template-columns: repeat(7, calc(100% / 7));  
+} 
+.card-table-32 {
+	grid-template-columns: repeat(8, calc(100% / 8));  
+}
+  
+/* Square off table layouts on mobile. */
+@media screen and (max-width: 600px) {
+  
+	.card-table-12 {
+	  	grid-template-columns: repeat(3, 33%);
+	}
+
+	.card-table-16 {
+	  	grid-template-columns: repeat(2, 50%);
+	}
+  
+	.card-table-20,
+	.card-table-24, 
+	.card-table-28, 
+	.card-table-32 {
+	  	grid-template-columns: repeat(4, 25%);
+	}
+  
+  }
+  
+.top-section, .bottom-section {
 	width: 100%;
-	height: 60px;
+	height: 50px;
 	display: flex;
 	justify-content: center;
+	background-color: black;
+    color: white;
 }
   
-.bottom-section {
-	height: calc(100% - 60px);
+/* height = 100% - top and bottom sections*/
+.middle-section {
 	width: 100%;
-    margin: auto;
+	height: calc(100% - 100px); 
+	min-height: 425px;
 }
-  
+
 .game {
+	border: 1px solid black;
 	width: 100%;
 	height: 100%;
-}
+	max-width: 800px;
+	margin: auto;
+  }

@@ -25,12 +25,12 @@ const GameSetup = ({startNewGame}) => {
         startNewGame(shuffledCards, cardCount, level);
 	} 
 
-	const cardCountOptions=["12","16","20","24","30","40"];
+	const cardCountOptions=["12","16","20","24","28","32"];
 	const cardLevelOptions=["easy","medium","hard"];
 
 	return (
 		<div className="game-setup">
-			<GameHeader headerText="Train your brain everyday with memory games." />
+			<GameHeader />
 			<div className="config">
 				<div className="config-detail">Choose your level.</div>
 				{cardLevelOptions.map((value, index) => (

@@ -7,13 +7,18 @@
 }
 
 .card-display {
-	padding: 2px;
+	padding: 5px;
+    font-size: 15pt;
+    text-align: center;
+    justify-content: center;
 }
 
-.card-display-text {
-	word-break: break-word;
-	text-align: center;
+@media screen and (max-width: 450px) {
+	.card-display {
+		font-size: 12pt;
+	}
 }
+
 
 /**
 Below here is all about flipping card over 
@@ -58,6 +63,8 @@ css animation.
 	background-color: whitesmoke;
 	color: black;
 	transform: rotateY(180deg);
+	display: flex;
+    flex-wrap: wrap;
 }
 
 .flip-card-selected {
