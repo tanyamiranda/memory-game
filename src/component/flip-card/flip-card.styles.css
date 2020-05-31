@@ -1,29 +1,3 @@
-.show-all-highlight-selected .flip-card-back {
-	border: 1px solid darkblue;
-}
-
-.card-display-red {
-	color: darkred;
-}
-
-.card-display {
-	padding: 5px;
-    font-size: 15pt;
-    text-align: center;
-    justify-content: center;
-}
-
-@media screen and (max-width: 450px) {
-	.card-display {
-		font-size: 12pt;
-	}
-}
-
-
-/**
-Below here is all about flipping card over 
-css animation.
-**/
 .flip-card-container {
 	perspective: 1000px;
 	display: flex;
@@ -39,8 +13,13 @@ css animation.
 }
 
 .flip-card svg {
-    width: 45px;
-    height: 45px;
+    width: 50%;
+    height: 50%;
+}
+
+.flip-card img {
+	width: 50%;
+	height: 50%;
 }
 
 .flip-card-front, .flip-card-back {
@@ -77,3 +56,9 @@ css animation.
     transform: rotateY(0deg);
 }
 
+/*
+If all cards are shown, then selected card has border 
+*/
+.show-all-highlight-selected .flip-card-back {
+	border: 1px solid darkblue;
+}

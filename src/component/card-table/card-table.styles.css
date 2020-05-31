@@ -14,19 +14,16 @@
   
 /** Table layout for different card selections **/
 .card-table-12, 
-.card-table-16, 
-.card-table-20 {
+.card-table-16 {
 	grid-template-columns: repeat(4, 25%);
 }
 
-.card-table-24 {
-	grid-template-columns: repeat(6, calc(100% / 6)); 
+.card-table-20 {
+	grid-template-columns: repeat(5, 20%);
 }
-.card-table-28 {
-	grid-template-columns: repeat(7, calc(100% / 7));  
-} 
-.card-table-32 {
-	grid-template-columns: repeat(8, calc(100% / 8));  
+
+.card-table-24, .card-table-30 {
+	grid-template-columns: repeat(6, calc(100% / 6)); 
 }
   
 /* Square off table layouts on mobile. */
@@ -36,15 +33,14 @@
 	  	grid-template-columns: repeat(3, 33%);
 	}
 
-	.card-table-16 {
-	  	grid-template-columns: repeat(2, 50%);
-	}
-  
+	.card-table-16,
 	.card-table-20,
-	.card-table-24, 
-	.card-table-28, 
-	.card-table-32 {
+	.card-table-24 {
 	  	grid-template-columns: repeat(4, 25%);
+	}
+
+	.card-table-30 {
+		grid-template-columns: repeat(5, 20%);
 	}
   
   }

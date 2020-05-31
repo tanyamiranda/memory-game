@@ -6,10 +6,10 @@ import './card-table.styles.css';
 import FlipCard from  '../flip-card/flip-card.component';
 import CardTableOptions from '../card-table-options/card-table-options.component';
 import CardTableHeader from '../card-table-header/card-table-header.component';
+
 const CardTable = ({completeSetOfCards, selectedCardCount}) => {
 
     return (
-
         <div className="game">
             <div className="top-section">
                 <CardTableHeader />
@@ -27,7 +27,6 @@ const CardTable = ({completeSetOfCards, selectedCardCount}) => {
         </div>
     )
 };
-
 
 const mapStateToProps = state => ({
     completeSetOfCards: state.game.completeSetOfCards,

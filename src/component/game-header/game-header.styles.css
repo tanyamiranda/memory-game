@@ -1,6 +1,6 @@
 .header-title {
     font-family: 'Ubuntu';
-    font-size: 25pt;
+    font-size: 20pt;
     color: black;
     text-align: center;
 }
@@ -10,6 +10,6 @@
 }
 
 .header-logo svg {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
 } 

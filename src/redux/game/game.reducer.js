@@ -1,7 +1,6 @@
 import GameActionTypes from './game.types';
 
 const INITIAL_STATE = {
-    selectedLevel: null,
     selectedCardCount: null,
     cardsHidden: true,
     completeSetOfCards: [],
@@ -22,7 +21,6 @@ const gameReducer = (state = INITIAL_STATE, action) => {
                 completeSetOfCards: action.payload.completeSetOfCards,
                 selectedCardCount: action.payload.cardCount,
                 cardsHidden: true,
-                selectedLevel: action.payload.level,
                 matchedCards: [],
                 selectedCardIndexes: [],
                 startTime: Date.now(),

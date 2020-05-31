@@ -1,5 +1,6 @@
 .game-setup {
     text-align: center;
+    margin: auto;
 }
 
 button {
@@ -8,7 +9,7 @@ button {
 }
 
 .config {
-    padding: 5px 0px;
+    padding: 20px 0px 0px 0px;
     width: 250px;
     margin: auto;
 }
@@ -18,9 +19,9 @@ button {
 }
 
 .config-option {
-    padding: 5px;
-    width: 70px;
-    background-color: #000e7e;
+    padding: 10px;
+    width: 150px;
+    background-color: green;
     display: inline-block;
     margin: 3px;
     border-radius: 10px;
