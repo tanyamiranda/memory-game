@@ -1,5 +1,5 @@
 .title {
-    padding-bottom: 10px;
+    padding: 5px;
     font-family: 'Ubuntu';
     font-size: 20pt;
     color: black;
@@ -7,5 +7,5 @@
 }
 
 .description {
-    padding: 10px 0px;
+    padding: 5px;
 }
