@@ -4,14 +4,14 @@ import { Provider } from 'react-redux';
 
 import './index.css';
 
-import App from './App';
+import MemoryGame from './pages/memory-game/memory-game.component';
 import {store} from './redux/store';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <MemoryGame />
   </Provider>,
   document.getElementById('root')
 );

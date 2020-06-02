@@ -3,16 +3,16 @@ import {connect} from 'react-redux';
 
 import './card-table.styles.css';
 
-import FlipCard from  '../flip-card/flip-card.component';
-import CardTableOptions from '../card-table-options/card-table-options.component';
-import CardTableHeader from '../card-table-header/card-table-header.component';
+import FlipCard from  '../../component/flip-card/flip-card.component';
+import CardTableOptions from '../../component/card-table-options/card-table-options.component';
+import GameHeader from '../../component/game-header/game-header.component';
 
 const CardTable = ({completeSetOfCards, selectedCardCount}) => {
 
     return (
         <div className="game">
             <div className="top-section">
-                <CardTableHeader />
+                <GameHeader gameTitle="Memory Game" />
             </div>
             <div id="middle-section" className="middle-section">
                 <div className={"card-table card-table-" + selectedCardCount}>

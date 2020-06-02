@@ -4,12 +4,12 @@ import './game-header.styles.css';
 
 import {ReactComponent as GameLogo} from '../../assets/logo-blue-green-black.svg';
 
-const GameHeader = ({headerText}) => {
+const GameHeader = ({gameTitle}) => {
+
     return (
         <div className="game-header">
-            <div className="header-logo"><GameLogo/></div>
-            <div className="header-title">Train Your Brain<br/>Memory Game</div>
-            <div className="header-text">{headerText}</div>
+            <div className="game-header-logo"><GameLogo/></div>  
+    <div className="game-header-title">Train Your Brain {gameTitle ? " - " + gameTitle : ""}</div>
         </div>
     )
 }

@@ -1,0 +1,11 @@
+.title {
+    padding-bottom: 10px;
+    font-family: 'Ubuntu';
+    font-size: 20pt;
+    color: black;
+    text-align: center;
+}
+
+.description {
+    padding: 10px 0px;
+}

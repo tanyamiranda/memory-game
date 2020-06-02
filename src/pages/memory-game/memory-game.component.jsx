@@ -1,16 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import './play-game.styles.css';
+import './memory-game.styles.css';
 
 import GameStats from '../game-stats/game-stats.component';
 import GameSetup from '../game-setup/game-setup.component';
 import CardTable from '../card-table/card-table.component';
 
-const PlayGame = ({completeSetOfCards, endTime}) => {
+const MemoryGame = ({completeSetOfCards, endTime}) => {
 
     return (
-        <div className="play-game">
+        <div className="memory-game">
+            
             {!completeSetOfCards || completeSetOfCards.length ===0 ?(
                 <GameSetup />
             ) : ( endTime !== null ? 
@@ -28,4 +29,4 @@ const mapStateToProps = state => ({
     endTime: state.game.endTime
 });
 
-export default connect(mapStateToProps)(PlayGame);
+export default connect(mapStateToProps)(MemoryGame);
