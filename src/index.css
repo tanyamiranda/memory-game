@@ -49,9 +49,14 @@ are all shared across the game pages.
   
 /* height = 100% - top and bottom section heights*/
 .middle-section {
-  display: flex;
+  display: inline-flex;
 	width: 100%;
 	height: calc(100% - 90px); 
 	max-width: 800px;
 	margin: auto;
+}
+
+.section-block {
+  margin: auto;
+  height: 80%;
 }

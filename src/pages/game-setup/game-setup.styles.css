@@ -6,19 +6,16 @@
     height: 100%;
 }
 
-.section-block {
-    margin: auto;
-}
-
 button {
     text-align: center;
     display: block;
 }
 
 .config {
-    padding: 20px 0px 0px 0px;
-    width: 250px;
-    margin: auto;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    place-content: space-evenly;
+    padding-top: 20px;
 }
 
 .config-detail {
@@ -26,8 +23,7 @@ button {
 }
 
 .config-option {
-    padding: 8px;
-    width: 200px;
+    padding: 10px;
     background-color: green;
     display: inline-block;
     margin: 3px;
