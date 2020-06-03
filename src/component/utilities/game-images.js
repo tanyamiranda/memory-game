@@ -8,15 +8,15 @@ export const getGameImageSet = (cardCount) => {
 
     const allImages = getAllImages();
 
-    const randomImages = selectRandomItemsFromArray(allImages, pairCount);
+    const shuffledImages = shuffleArray(allImages).slice(0,pairCount);
 
-    const pairedImages = [].concat(randomImages).concat(randomImages);
+    const pairedImages = [].concat(shuffledImages).concat(shuffledImages);
 
     return shuffleArray(pairedImages);
 
 }
 
-const getAllImages = () => {
+export const getAllImages = () => {
 
     let allImages = [];
 
@@ -26,7 +26,7 @@ const getAllImages = () => {
     return allImages;
 }
 
-const shuffleArray = (array) => {
+export const shuffleArray = (array) => {
     var m = array.length, t, i;
   
     // While there remain elements to shuffle…
@@ -44,7 +44,7 @@ const shuffleArray = (array) => {
     return array;
 }
 
-const selectRandomItemsFromArray = (completeArray, itemCount) => {
+export const selectRandomItemsFromArray = (completeArray, itemCount) => {
 
     const maxIndex = completeArray.length;
     const randomSelection = [];

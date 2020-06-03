@@ -1,5 +1,4 @@
 .game-setup {
-    display: inline;
     text-align: center;
     margin: auto;
     width: 100%;
@@ -12,10 +11,8 @@ button {
 }
 
 .config {
-    display: grid;
-    grid-template-columns: 40% 40%;
-    place-content: space-evenly;
     padding-top: 20px;
+    max-width: 500px;
 }
 
 .config-detail {
@@ -23,6 +20,7 @@ button {
 }
 
 .config-option {
+    width: 200px;
     padding: 10px;
     background-color: green;
     display: inline-block;

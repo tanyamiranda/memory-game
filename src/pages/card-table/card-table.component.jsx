@@ -14,7 +14,7 @@ const CardTable = ({completeSetOfCards, selectedCardCount}) => {
             <div className="top-section">
                 <GameHeader gameTitle="Memory Game" />
             </div>
-            <div id="middle-section" className="middle-section">
+            <div className="middle-section">
                 <div className={"card-table card-table-" + selectedCardCount}>
                 { completeSetOfCards.map((card, index) => (
                     <FlipCard key={index} cardId={card} cardIndex={index} />
