@@ -13,13 +13,13 @@
 }
 
 .flip-card svg {
-    width: 75%;
-    height: 75%;
+    width: 65%;
+    height: 65%;
 }
 
 .flip-card img {
-	width: 75%;
-	height: 75%;
+	width: 65%;
+	height: 65%;
 }
 
 .flip-card-front, .flip-card-back {

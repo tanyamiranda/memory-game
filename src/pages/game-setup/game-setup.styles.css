@@ -20,7 +20,7 @@ button {
 }
 
 .config-option {
-    width: 200px;
+    width: 45%;
     padding: 10px;
     background-color: green;
     display: inline-block;
