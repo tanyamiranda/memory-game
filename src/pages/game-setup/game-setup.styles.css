@@ -30,6 +30,8 @@ button {
     color: white;
     font-family: 'Ubuntu';
     text-transform: uppercase;
+    font-size: 15px;
+    height: 50px;
 }
 
 .config-option-selected {
