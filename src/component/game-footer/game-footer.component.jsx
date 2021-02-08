@@ -5,7 +5,7 @@ import './game-footer.styles.css';
 const GameFooter = () => {
 
     return (
-        <div className="game-footer-text">Train your brain everyday!</div>
+        <div className="game-footer-text">Train Your Brain Everyday!</div>
     )
 }
 
