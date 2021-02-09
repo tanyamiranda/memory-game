@@ -5,8 +5,10 @@ body {
 	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 	margin: 0px;
   width: 100%;
+  height: 100%;
 
-  height: 100vh;
+  /* The --vh variable defined in index.html*/
+  height: calc(var(--vh, 1vh) * 100);
 
   background-image: url('squares.svg');
 	background-color: lightgray;
@@ -15,7 +17,7 @@ body {
 
 html { 
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 #content {
