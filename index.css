@@ -7,8 +7,6 @@ body {
   width: 100%;
 
   height: 100vh;
-  /** this fixes footer from hiding behind the browser bottom bar **/
-  height: -webkit-fill-available; 
 
   background-image: url('squares.svg');
 	background-color: lightgray;
@@ -17,8 +15,7 @@ body {
 
 html { 
   width: 100%;
-  /** this fixes footer from hiding behind the browser bottom bar **/
-  height: -webkit-fill-available; 
+  height: 100vh;
 }
 
 #content {
