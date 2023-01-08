@@ -6,9 +6,7 @@ body {
   
 	margin: 0px;
   width: 100%;
-
-  /* The --vh variable defined in index.html*/
-  height: calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 100); /* --vh defined in index.html*/
 
   background-image: url('squares.svg');
 	background-color: lightgray;
@@ -56,6 +54,7 @@ are all shared across the game pages.
   display: inline-flex;
 	width: 100%;
 	height: calc(100% - 90px); 
+  min-height: calc(100% - 90px);
 	max-width: 800px;
 	margin: auto;
 }
