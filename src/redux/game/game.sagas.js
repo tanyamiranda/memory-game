@@ -17,7 +17,7 @@ export function* evaluateSelection() {
         const cardIndexValue2 = game.completeSetOfCards[game.selectedCardIndexes[1]];
 
         if(cardIndexValue1 === cardIndexValue2 ) {
-            yield delay(500);
+            yield delay(250);
             yield put(foundMatchingCards(cardIndexValue1));
 
             if (game.matchedCards.length === (game.completeSetOfCards.length / 2)) {
@@ -25,7 +25,7 @@ export function* evaluateSelection() {
             }
         }
         else {
-            yield delay(700); //delay to allow for front end card flipping
+            yield delay(250); //delay to allow for front end card flipping
             yield put(resetCardTable());
         }
 

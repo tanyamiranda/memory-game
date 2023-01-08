@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { useEffect } from 'react';
 
 import './game-stats.styles.css';
 
@@ -8,17 +9,28 @@ import GameHeader from '../../component/game-header/game-header.component';
 import GameFooter from '../../component/game-footer/game-footer.component';
 import {getElapsedTime} from '../../component/utilities/formatting';
 import {cancelCurrentGame} from '../../redux/game/game.actions';
+import { addFireworks } from './fireworks';
 
 const GameStats = ({startTime, endTime, totalCardFlips, totalMatchAttempts, cancelCurrentGame, selectedLevel, selectedCardCount}) => {
+
+	// This will run one time after the component mounts
+	useEffect(() => {
+		triggerFireworks();
+	}, []);
+
+    const triggerFireworks = () => {
+		let element = window.document.getElementById('middle-section');
+		addFireworks(element);
+	}
 
     return (
         <div className='game-stats'>
             <div className="top-section">
 				<GameHeader />
 			</div>
-			<div className="middle-section">
+			<div className="middle-section" id="middle-section">
                 <div className="section-block">
-                    <GameTitle gameTitle="Memory Game" gameDescription="Congratulations! You've flexed your brain muscles!" />
+                    <GameTitle gameTitle="Congratulations!" gameDescription="You've flexed your brain muscles!" />
                     <div className="stats-table">
                         <div className="game-stat">
                             <span className="label">Card Count:</span>
