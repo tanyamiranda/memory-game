@@ -41,7 +41,7 @@
   <script>
     // *******************************************************
     // This Javascript is used to control the display height 
-    // in mobile browsers. It adjusts according the viewport 
+    // to position the footer. It adjusts according the viewport 
     // with browser bars on top and bottom of the screen.
     // *******************************************************
     function setDeviceWindowHeight() {
@@ -50,6 +50,34 @@
     }
 
     setDeviceWindowHeight();
-    window.onresize = setDeviceWindowHeight();
+    window.onload = setDeviceWindowHeight; 
+    window.onresize = setDeviceWindowHeight;
+
+    // *******************************************************
+    // The call to setDeviceWindowHeight and assignment to the
+    // windows.onload event is NOT redundant. Both are necessary.
+    //
+    // The setDeviceWindowHeight direct call is for laptop/PC browsers.
+    // It prevents a flicker effect when loading the page. If we use
+    // only the window.onload event, the game's footer flickers into
+    // position. This is because the footer's natural position 
+    // is just below the main contents before calling the function,
+    // which then moves it to the correct position.
+    //
+    // The window.onload event assignment is for when the game is 
+    // opened in a new browser window on a mobile device. 
+    // For some devices/browsers/versions combinations, the 
+    // calculation of the window.innerheight value will sometimes 
+    // exclude the browser's bottom bar upon page loading. 
+    // This causes the game's footer to be displayed below 
+    // the mobile browser's bottom bar, essentially hiding it.
+    // The user would have to know to scroll down to access 
+    // the game's footer, which is not obvious since the game
+    // is set to be exact width and height of the browser's
+    // viewable window.
+    // 
+    // *******************************************************
+    
+
   </script>
 </html>
