@@ -9,13 +9,18 @@ import GameHeader from '../../component/game-header/game-header.component';
 import GameFooter from '../../component/game-footer/game-footer.component';
 import {getElapsedTime} from '../../component/utilities/formatting';
 import {cancelCurrentGame} from '../../redux/game/game.actions';
-import { addFireworks } from './fireworks';
+import {addFireworks,removeFireworks} from './fireworks';
 
 const GameStats = ({startTime, endTime, totalCardFlips, totalMatchAttempts, cancelCurrentGame, selectedLevel, selectedCardCount}) => {
 
 	// This will run one time after the component mounts
 	useEffect(() => {
 		triggerFireworks();
+
+        return () => {
+            removeFireworks();
+        }
+
 	}, []);
 
     const triggerFireworks = () => {

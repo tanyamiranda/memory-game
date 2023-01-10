@@ -5,14 +5,24 @@ const max_sparks = 50;
 let canvas = null;
 let context = null;
 let fireworks = [];
+let isFireworksActive = false;
 
+export const removeFireworks = () => {
+  isFireworksActive = false;
+  canvas = null;
+  context = null;
+  fireworks = [];
+}
 
 export const addFireworks = (element) => {
+
+  isFireworksActive = true;
   canvas = document.createElement('canvas');
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
   canvas.id = 'fireworks-canvas';
   context = canvas.getContext('2d');
+
   element.appendChild(canvas);
   setOffFireworks();
 }
@@ -52,6 +62,10 @@ function resetFirework(canvas, firework) {
 
  
 function explode() {
+ 
+  if(!isFireworksActive)
+    return;
+
   context.clearRect(0, 0, canvas.width, canvas.height);
   fireworks.forEach((firework,index) => {
     if (firework.phase === 'explode') {
@@ -85,5 +99,6 @@ function explode() {
       if (Math.random() < .001 || firework.y < 200) firework.phase = 'explode';
     }
   });
+
   window.requestAnimationFrame(explode);
 }
