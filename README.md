@@ -1,19 +1,37 @@
 # 📚Classic Memory Game
 
-This is a classic memory game app built in the React Framework.
+A memory matching card game built with React, Redux, and HTML5 Canvas.
 
-Before running locally:
+## 🧩 Tech Stack
 
-- Install **Node.js**: https://nodejs.org/en
+* **Frontend:** React 18
+* **State Management:** Redux, React-Redux, Redux-Saga
+* **Build Tooling:** Create React App (`react-scripts` v5)
+* **Package Manager:** npm
+* **Deployment:** GitHub Pages
 
-## ⚙️ Setup Development Environment
+---
 
-1️⃣ **Install all packages for development environment**
+## 🧰 Prerequisites
+
+Make sure you have Node.js installed on your machine.
+
+* **Node.js:** `v18.x` or higher
+* **npm:** `v9.x` or higher
+
+## ⚙️ Available Commands
+
+**Install all packages for development environment**
 ```
-yarn clean-install
+npm install
 ```
 
-2️⃣ **Run Local Server**
+**Run Local Server**
 ```
-yarn start
+npm start
+```
+
+**Deploy to Github Pages**
+```
+npm run deploy
 ```
