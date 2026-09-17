@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { legacy_connect as connect } from 'react-redux';
 
 import {GAME_IMAGES} from './flip-card-images';
 import './flip-card.styles.css';

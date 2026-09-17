@@ -1,10 +1,12 @@
 .title {
-    padding: 5px;
-    font-size: 20pt;
-    color: black;
-    text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px;
+  font-size: 23pt;
+  color: black;
+  text-align: center;
 }
 
 .description {
-    padding: 10px;
+    padding: 10px 25px;
 }

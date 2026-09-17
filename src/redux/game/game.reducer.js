@@ -51,10 +51,9 @@ const gameReducer = (state = INITIAL_STATE, action) => {
             }
 
         case GameActionTypes.SELECT_CARD:
-            state.selectedCardIndexes.push(action.payload);
             return {
                 ...state,
-                selectedCardIndexes: [].concat(state.selectedCardIndexes),
+                selectedCardIndexes: [...state.selectedCardIndexes, action.payload],
                 totalCardFlips: state.totalCardFlips + 1
             }
         
@@ -71,10 +70,9 @@ const gameReducer = (state = INITIAL_STATE, action) => {
             }
 
         case GameActionTypes.FOUND_MATCHING_CARDS:
-            state.matchedCards.push(action.payload)
             return {
                 ...state,
-                matchedCards: [].concat(state.matchedCards),
+                matchedCards: [...state.matchedCards, action.payload],
                 selectedCardIndexes: []
             }
         

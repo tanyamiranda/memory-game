@@ -7,7 +7,7 @@ import {foundMatchingCards, resetCardTable, continuePlaying, finishGame, attempt
 export function* evaluateSelection() {
 
     const selectGame = (state) => state.game;
-    const game = yield select(selectGame);
+    let game = yield select(selectGame);
 
     if (game.selectedCardIndexes.length===2) {
 
@@ -19,6 +19,9 @@ export function* evaluateSelection() {
         if(cardIndexValue1 === cardIndexValue2 ) {
             yield delay(250);
             yield put(foundMatchingCards(cardIndexValue1));
+
+            // Fetch updated state after dispatching foundMatchingCards
+            game = yield select(selectGame);
 
             if (game.matchedCards.length === (game.completeSetOfCards.length / 2)) {
                 yield put(finishGame());
