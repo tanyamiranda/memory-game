@@ -11,6 +11,14 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "overrides": {
+    "nth-check": "^2.1.1",
+    "postcss": "^8.4.31",
+    "@tootallnate/once": "^2.0.1",
+    "serialize-javascript": "^7.0.5",
+    "underscore": "^1.13.8",
+    "uuid": "^11.1.1"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
     "@testing-library/jest-dom": "^7.0.1",
